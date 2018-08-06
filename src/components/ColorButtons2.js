@@ -1,19 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class ColorButtons2 extends Component {
     onClick = (color) => {
-        const {onSelectColor} = this.props;
-        onSelectColor(color);
+      const { onSelectColor } = this.props;
+      onSelectColor(color);
     }
+
     render() {
-        return (
+      return (
         <div className="color-button-container">
-            <button onClick={()=> this.onClick("green")}>Green</button>
-            <button onClick={()=> this.onClick("fuchsia")}>Fuchsia</button>
-            <button onClick={()=> this.onClick("white")}>White</button>
+          <button type="button" onClick={() => this.onClick('green')}>
+            Green
+          </button>
+          <button type="button" onClick={() => this.onClick('fuchsia')}>
+                Fuchsia
+          </button>
+          <button type="button" onClick={() => this.onClick('white')}>
+                White
+          </button>
         </div>
-        )
+      );
     }
 }
 
-export default ColorButtons2
+export default ColorButtons2;

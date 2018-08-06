@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function ColorChooser(props) {
-    return (
-        <input
-            value={props.selectedColor}
-            onChange={props.onColorChange}
-            onFocus = {props.onFocus}
-        />
-    )
+export default function ColorChooser({ selectedColor, onColorChange, onFocus }) {
+  return (
+    <input
+      value={selectedColor}
+      onChange={onColorChange}
+      onFocus={onFocus}
+    />
+  );
 }
